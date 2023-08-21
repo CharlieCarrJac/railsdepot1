@@ -59,7 +59,7 @@ Product.create!(title: 'GYPSOPHILA MILLION STAR WHITE',
           Botanical: gypsophila 'Million Star' 
           Availability: Jan-Dec
       </p>},
-  image_url: 'ruby.jpg',
+  image_url: 'IMG_2665.JPG',
   price per bunch: 10.00)
 
 # . . .

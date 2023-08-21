@@ -27,10 +27,25 @@
         <ul>
           <li><a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
                   
+                  
          
-           <li><a href="about.html.erb"><i class="fa fa-fw fa-search"></i>About Us</a></li>
-         
-          <li><a href="/news"><i class="fa fa-fw fa-globe"></i>News</a></li>
+           <li class="side_nav_link">
+          <%= link_to store_about_path do %>  
+          About Us 
+          <% end %>
+        </li>
+
+        <li class="side_nav_link">
+          <%= link_to store_news_path do %>  
+          NEWS
+          <% end %>
+        </li>
+
+
+          <!-- <li><a href="/news"><i class="fa fa-fw fa-globe"></i>News</a></li>
+          -->
+
+
           <li><a href="/contact"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
         </ul>
       </nav>
@@ -60,7 +75,7 @@
                 <div class="footer-column-1">
                     <h3>News</h3>
                     <a href="#">VENTE PRIVEE</a>
-                    <a href="#">Coming Up: The week 32 for</a>
+                    <a href="#">Coming Up: The week of 32 for</a>
                     <a href="#">Gypsophila</a>
                 </div>
             
