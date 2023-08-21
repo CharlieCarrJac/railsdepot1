@@ -5,7 +5,7 @@
 <h1>GreatCutFlowers Catalog</h1>
 
 <ul class="catalog">
-	<% cache @product do %>
+	<% cache @products do %>
 	<% @products.each do |product| %>
 		<% cache product do %>
 		<li>
@@ -16,8 +16,10 @@
 			</p>
 			
 			<div class="price">
-				<%= number_to_currency(product.price) %>
-			<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+			<%= number_to_currency(product.price) %>
+			
+			<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true, class:"add-to-cart" %>
+			
 			</div>
 			</li>
 			<% end %>	

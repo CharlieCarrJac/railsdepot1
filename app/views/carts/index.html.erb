@@ -4,11 +4,14 @@
 
 <div id="carts">
   <% @carts.each do |cart| %>
-    <%= render cart %>
+    <%= render 'cart' %>
     <p>
       <%= link_to "Show this cart", cart %>
+    
+      <%= link_to "New cart", new_cart_path %>
     </p>
   <% end %>
+
 </div>
 
-<%= link_to "New cart", new_cart_path %>
+

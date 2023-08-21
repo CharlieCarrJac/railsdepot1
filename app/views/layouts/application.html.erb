@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pragprog Books Online Store</title>
+    <title>GreatCutFlowers</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,24 +13,82 @@
 
   <body>
     <header class="main">
-      <%= image_tag 'logo.svg' , alt: 'The Pragmatic Bookshelf' %>
+      <%= image_tag 'rails.png' , alt: 'GreatCutFlowers' %>
       <h1><%= @page_title %></h1>
     </header>
     <section class="content">
+      
       <nav class="side_nav">
+       
+       <div id="cart" class="carts">
+         <%= render_if @cart && @cart.line_items.any?, @cart %>
+       </div> 
+               
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/questions">Flower items -questions-</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                  
+         
+           <li><a href="about.html.erb"><i class="fa fa-fw fa-search"></i>About Us</a></li>
+         
+          <li><a href="/news"><i class="fa fa-fw fa-globe"></i>News</a></li>
+          <li><a href="/contact"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
         </ul>
       </nav>
 
     <main class='<%= controller.controller_name %>'> 
     <%= yield %>
     </main>
+    
     </section>
-  </body>
+    <footer>
+            <div class="footer-second">
+                <div class="footer-column-3">
+                    <h3>About Us</h3>
+                    <a href="#">Our Company</a>
+                    <a href="#">Our Services</a>
+                    <a href="#">We Care</a>
+                    <a href="#">Certifications</a>
+                </div>
+
+                <div class="footer-column-2">
+                    <h3>Customer Service</h3>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Track Your Order</a>
+                    <a href="#">Terms Of Purchase</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer-column-1">
+                    <h3>News</h3>
+                    <a href="#">VENTE PRIVEE</a>
+                    <a href="#">Coming Up: The week 32 for</a>
+                    <a href="#">Gypsophila</a>
+                </div>
+            
+            </div>
+
+            <div class="bottom-details">
+            <div class="bottom-text">
+            <span class="copyright_text">Copyright &copy; 2023 <a href="#"> GreatCutFlowers, LLC</a> - All rights reserved - </span>
+            <span class="policy_terms">
+                <a href="#">Privacy Policy - </a>
+                <a href="#">Terms & Conditions</a>
+            </span>
+            </div>
+            
+
+            </div>      
+    
+            <div class="media-icons">
+                <h4>FOLLOW US</h4>
+                <i class="fa fa-facebook-square" style="font-size:36px"></i>
+                <i class="fa fa-twitter" style="font-size:36px"></i>
+                <i class="fa fa-instagram" style="font-size:36px"></i>
+                <i class="fa fa-linkedin-in" style="font-size:36px"></i>
+                <i class="fa fa-youtube" style="font-size:36px"></i>
+            </div>
+
+    </footer>
+    </body>
 </html>
 
 

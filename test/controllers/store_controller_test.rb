@@ -10,4 +10,8 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     assert_select '.price', /\$[,\d]+\.\d\d/
   
   end
+test "should get footer" do
+    get store_footer_url
+end
+
 end

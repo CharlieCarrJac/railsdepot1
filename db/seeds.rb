@@ -52,7 +52,17 @@ Product.create!(title: 'Programming Crystal',
 
 # . . .
 
+Product.create!(title: 'GYPSOPHILA MILLION STAR WHITE',
+  description:
+    %{<p>
+      <em>Color: White
+          Botanical: gypsophila 'Million Star' 
+          Availability: Jan-Dec
+      </p>},
+  image_url: 'ruby.jpg',
+  price per bunch: 10.00)
 
+# . . .
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).

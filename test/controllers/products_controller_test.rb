@@ -48,7 +48,7 @@ test "can't delete product in cart" do
   end
 
   test "should destroy product" do
-    assert_difference("Product.count", -1) do
+    assert_difference('Product.count', -1) do
       delete product_url(@product)
     end
 

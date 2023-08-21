@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
+  # rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   # before_action :set_cart, only: %i[ show edit update destroy ]
 
   # GET /carts or /carts.json
@@ -72,7 +72,7 @@ class CartsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
-      @cart = Cart.find(params[:cart_id])
+      @cart = Cart.new(params[:cart_id])
     end
 
     # Only allow a list of trusted parameters through.
@@ -80,8 +80,11 @@ class CartsController < ApplicationController
       params.fetch(:cart, {})
     end
 
-def invalid_cart
-  logger.error "Attempt to access invalid cart #{params[:id]}"
-  redirect_to store_index_url, notice: 'Invalid cart'
-end
+ def invalid_cart
+   logger.error "Attempt to access invalid cart #{params[:id]}"
+   redirect_to store_index_url, notice: 'Invalid cart'
+ end
+
+
+
 end
