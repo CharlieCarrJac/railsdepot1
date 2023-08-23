@@ -77,4 +77,10 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:name, :address, :email, :pay_type)
     end
+
+def new
+  puts "IN NEW!"
+  @order = Order.new
+end
+
 end

@@ -19,31 +19,24 @@
     <section class="content">
       
       <nav class="side_nav">
-       
        <div id="cart" class="carts">
          <%= render_if @cart && @cart.line_items.any?, @cart %>
        </div> 
                
         <ul>
           <li><a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                  
-                  
-         
-           <li class="side_nav_link">
-          <%= link_to store_about_path do %>  
+
+          <li class="side_nav_link">
+          <%= link_to store_about_path do %><i class="fa fa-fw fa-search"></i> 
           About Us 
           <% end %>
         </li>
 
         <li class="side_nav_link">
-          <%= link_to store_news_path do %>  
+          <%= link_to store_news_path do %><i class="fa fa-fw fa-globe"></i>   
           NEWS
           <% end %>
         </li>
-
-
-          <!-- <li><a href="/news"><i class="fa fa-fw fa-globe"></i>News</a></li>
-          -->
 
 
           <li><a href="/contact"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
