@@ -1,12 +1,8 @@
-<div id="<%= dom_id cart %>">
-</div>
-
-
 <article>
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
-<% unless cart.line_items.empty? %>
+
 <h2>Your GreatCutFlowers Cart</h2>
 <table>
 <%= render (cart.line_items) %>
@@ -20,9 +16,9 @@
  </table>
 <div class="actions">
 <%=  button_to "Empty cart", cart, method: :delete,
-      data: { confirm: 'Are you sure?'}, class:"empty-cart" %>
+      data: { confirm: 'Are you sure?'} %>
 
-<%=  button_to "Continue to Secure Checkout", cart, method: :get, class:"checkout-cart" %>
+<%=  button_to "Continue to Secure Checkout", new_order_path, method: :get, class:"checkout-cart" %>
 </div>
-<% end %>
+
 </article>
