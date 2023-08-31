@@ -60,7 +60,7 @@ Product.create!(title: 'GYPSOPHILA MILLION STAR WHITE',
           Availability: Jan-Dec
       </p>},
   image_url: 'IMG_2665.JPG',
-  price per bunch: 10.00)
+  price: 10.00)
 
 # . . .
 
