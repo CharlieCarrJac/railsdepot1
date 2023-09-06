@@ -17,4 +17,16 @@ end
 def footer  
 end
 
+def privacy  
+end
+
+def terms  
+end
+
+def faqs  
+end
+
+def claims  
+end
+
 end

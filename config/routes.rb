@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   
   get 'store/about'
   get 'store/news'
+  get 'store/privacy'
+  get 'store/terms'
+  get 'store/faqs'
+  get 'store/claims'
 
 
   resources :products 
