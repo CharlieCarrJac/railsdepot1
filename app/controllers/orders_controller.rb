@@ -80,9 +80,6 @@ private
       end
     end
 
-def new
-  puts "IN NEW!"
-  @order = Order.new
-end
+
 
 end
