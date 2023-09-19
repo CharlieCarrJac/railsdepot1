@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
+  resources :line_items, only: [:destroy]
+
 
   end
 

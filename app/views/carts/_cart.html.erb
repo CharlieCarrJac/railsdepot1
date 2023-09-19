@@ -3,7 +3,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h2>Your GreatCutFlowers Cart</h2>
+<h2>Your Cart</h2>
 <table>
 <%= render (cart.line_items) %>
 
@@ -15,6 +15,10 @@
  </tfoot>
  </table>
 <div class="actions">
+
+<%=  button_to "Delete", cart, method: :delete,
+      data: { confirm: 'Are you sure?' }, class:"delete" %>    
+
 <%=  button_to "Empty cart", cart, method: :delete,
       data: { confirm: 'Are you sure?' }, class:"empty-cart" %>
 
