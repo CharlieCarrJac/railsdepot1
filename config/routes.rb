@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'store/terms'
   get 'store/faqs'
   get 'store/claims'
+  get 'store/shipping'
+
 
 
   resources :products 

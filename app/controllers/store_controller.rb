@@ -4,8 +4,7 @@ class StoreController < ApplicationController
 
  def index
     @products = Product.order(:title)
-  
-  
+    
 end
 
 def about
@@ -15,6 +14,9 @@ def news
 end
 
 def footer  
+end
+
+def shipping 
 end
 
 def privacy  
@@ -28,5 +30,7 @@ end
 
 def claims  
 end
+
+
 
 end
