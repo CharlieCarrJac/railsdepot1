@@ -7,6 +7,17 @@
 <table>
 <%= render (cart.line_items) %>
 
+<% @cart.items.each do |item| %>
+  <tr>
+    <td><%= item.product.name %></td>
+    <td><%= item.quantity %></td>
+    <td><%= number_to_currency(item.total_price) %></td>
+    <td><%= button_to 'Remove', cart_item_path(item), method: :delete, remote: true %></td>
+  </tr>
+<% end %>
+
+
+
 <tfoot>
 <tr>
 <th colspan="2">Total:</th>
