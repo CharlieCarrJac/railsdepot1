@@ -51,16 +51,37 @@ class LineItemsController < ApplicationController
     end
   end
 
+# Decrement /line_items or Delete from AI
+#def destroy
+ #   @line_item = LineItem.find(params[:id])
+  #  @line_item.decrement_quantity!
+  #  if @line_item.quantity.zero?
+  #    @line_item.destroy
+  #  end
+  #  respond_to do |format|
+  #    format.html { redirect_to line_items_url(@line_item)}
+  #    format.js
+  #  end
+ # end
+
+
+
   # DELETE /line_items/1 or /line_items/1.json
   def destroy
-    
     @line_item = LineItem.find(params[ :id])
+    @line_item.decrement_quantity!
+    if @line_item.quantity.zero?
     @line_item.destroy
+  end
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: "Line item was successfully deleted." }
       format.json { head :no_content }
     end
   end
+
+  
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
