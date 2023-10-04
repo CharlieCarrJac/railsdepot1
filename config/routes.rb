@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :customers
   
+
+  devise_scope :user do
+    get 'users/sign_out' => "devise/sessions#destroy"
+end
   
   
   root 'store#index', as: 'store_index'
