@@ -6,42 +6,68 @@
                     <a href="#">Our Services</a>
                     <a href="#">We Care</a>
                     <a href="#">Certifications</a>
+                    <a href="#">Careers</a>
                 </div>
 
                 <div class="footer-column-2">
-                    <h3>Customer Service</h3>
+                    <h3>Customer Support</h3>
                     <a href="#">Contact Us</a>
+                    <a href="#">Manage Account</a>
                     <a href="#">Track Your Order</a>
-                    <a href="#">Terms Of Purchase</a>
-                    <a href="#">FAQs</a>
+                    <a href="#">Order History</a>
+                    
+                    <%= link_to store_claims_path do %>   
+                    Claims & Credit Policy
+                    <% end %>
+
+                    <%= link_to store_faqs_path do %>   
+                    FAQs
+                    <% end %>
+                    
+                    <%= link_to store_shipping_path do %>   
+                    Shipping Policy
+                    <% end %>
+
+
+                   
+
                 </div>
                 <div class="footer-column-1">
                     <h3>News</h3>
                     <a href="#">VENTE PRIVEE</a>
-                    <a href="#">Coming Up: The week 32 for</a>
-                    <a href="#">Gypsophila</a>
+                    <a href="#">Coming Up: The week of 42 for Gypsophila</a>
+                    <a href="#">GCF Rewards</a>
+                    <a href="#">Purchase Agreement</a>
                 </div>
             
             </div>
 
             <div class="bottom-details">
-            <div class="bottom_text">
+            <div class="bottom-text">
             <span class="copyright_text">Copyright &copy; 2023 <a href="#"> GreatCutFlowers, LLC</a> - All rights reserved - </span>
-            <span class="policy_terms">
-                <a href="#">Privacy Policy - </a>
-                <a href="#">Terms & Conditions</a>
+            <span class="policy_terms">            
+
+          <%= link_to store_privacy_path do %>   
+          Privacy Policy -
+          <% end %>
+        
+          <%= link_to store_terms_path do %>   
+          Terms & Conditions
+          <% end %>
+                
             </span>
             </div>
-            <div class="media-icons">
-                <h5>FOLLOW US</h5>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+            
 
             </div>      
-            
+    
+            <div class="media-icons">
+                <h4>FOLLOW US</h4>
+                <i class="fa fa-facebook-square" style="font-size:36px"></i>
+                <i class="fa fa-twitter" style="font-size:36px"></i>
+                <i class="fa fa-instagram" style="font-size:36px"></i>
+                <i class="fa fa-linkedin-in" style="font-size:36px"></i>
+                <i class="fa fa-youtube" style="font-size:36px"></i>
+            </div>
 
     </footer>

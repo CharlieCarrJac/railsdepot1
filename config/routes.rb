@@ -19,6 +19,7 @@ end
   get 'store/claims'
   get 'store/shipping'
 
+  get '/images/:filename', to: 'images#show'
 
 
   resources :products 
