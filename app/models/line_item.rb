@@ -1,16 +1,9 @@
 class LineItem < ApplicationRecord
+  belongs_to :order, optional: true
   belongs_to :product
-  belongs_to :cart
-def quantity
-  # define quantity here
-  self[:quantity] || 1
-end
+  belongs_to :cart, optional: true
 
 def total_price
-  if quantity.nil?
-  0
-  else  
   product.price * quantity
-end
 end
 end
