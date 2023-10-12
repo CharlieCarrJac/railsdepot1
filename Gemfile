@@ -74,5 +74,8 @@ group :test do
   gem "webdrivers"
 end
 
-
 gem 'pry', '~> 0.14.1'
+
+gem 'rss', '~> 0.3.0'
+
+

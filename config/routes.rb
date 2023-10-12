@@ -22,13 +22,14 @@ end
   get '/images/:filename', to: 'images#show'
 
 
-  resources :products 
   resources :orders
   resources :line_items
   resources :carts
   resources :line_items, only: [:destroy]
 
-
+  resources :products do
+  get :who_bought, on: :member 
+end
   end
 
   #get 'store/index'
