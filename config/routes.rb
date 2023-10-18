@@ -28,7 +28,7 @@ end
   resources :line_items, only: [:destroy]
 
   resources :products do
-  get :who_bought, on: :member 
+    get :who_bought, on: :member 
 end
   end
 
