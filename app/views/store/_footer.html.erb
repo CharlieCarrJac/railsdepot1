@@ -28,16 +28,20 @@
                     Shipping Policy
                     <% end %>
 
-
+                    
                    
 
                 </div>
                 <div class="footer-column-1">
-                    <h3>News</h3>
+                    <h3>News & Media</h3>
                     <a href="#">VENTE PRIVEE</a>
                     <a href="#">Coming Up: The week of 42 for Gypsophila</a>
                     <a href="#">GCF Rewards</a>
-                    <a href="#">Purchase Agreement</a>
+                    
+                    <%= link_to store_purchase_path do %>   
+                    Purchase Agreement
+                    <% end %>
+
                 </div>
             
             </div>
@@ -64,10 +68,11 @@
             <div class="media-icons">
                 <h4>FOLLOW US</h4>
                 <i class="fa fa-facebook-square" style="font-size:36px"></i>
-                <i class="fa fa-twitter" style="font-size:36px"></i>
                 <i class="fa fa-instagram" style="font-size:36px"></i>
-                <i class="fa fa-linkedin-in" style="font-size:36px"></i>
+                <i class="fa fa-linkedin" aria-hidden="true" style="font-size:36px"></i>
                 <i class="fa fa-youtube" style="font-size:36px"></i>
+            
+                <i class="fa-brands fa-square-x-twitter" style="font-size:36px" ></i>
             </div>
 
     </footer>

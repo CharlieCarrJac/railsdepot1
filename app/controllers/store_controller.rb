@@ -31,6 +31,7 @@ end
 def claims  
 end
 
-
+def purchase  
+end
 
 end

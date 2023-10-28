@@ -12,6 +12,8 @@ validates :image_url, allow_blank: true, format: {
 }
 validates :price, numericality: { greater_than_or_equal_to: 0.01 }
 
+
+
 private
 
 	#ensure that there are no line items referencing this product

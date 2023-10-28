@@ -18,6 +18,7 @@ end
   get 'store/faqs'
   get 'store/claims'
   get 'store/shipping'
+  get 'store/purchase'
 
   get '/images/:filename', to: 'images#show'
 
